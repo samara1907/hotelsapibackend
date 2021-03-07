@@ -1,12 +1,8 @@
 const Pool = require("pg").Pool;
 
+const connectionString ="postgres://niltoxra:SWMNMYRlAHH8E34emq4ZqUrQMfHNbUJL@ruby.db.elephantsql.com:5432/niltoxra"
 const pool = new  Pool({
-	host: 'localhost',
-	user: 'postgres',
-	password: '0102326134',
-	database: 'hotelsinfo',
-	port: '5432'
-		
+	connectionString,	
 });
 
 module.exports = pool;
