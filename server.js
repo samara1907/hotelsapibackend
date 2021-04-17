@@ -22,7 +22,7 @@ app.post('/add', async(req,res)=>{
 
 app.get("/add", async (req,res)=>{
 	try{
-		const hotelslist = await pool.query("SELECT * FROM hotels");
+		const hotelslist = await pool.query("SELECT * FROM hotels ORDER BY rating ASC");
 		res.json(hotelslist.rows);
 	}catch(err){
 		console.error(err.message);
